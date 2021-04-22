@@ -1,0 +1,28 @@
+<html>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="./style.css">
+   
+    <script id="ipcRendererLoader"></script>
+<body style="margin:0px">
+	<div class="box">
+		<h2>Extension de eval<h2>
+		<h5>Cette extension permet de tester du code javascript avec votre bot</h5>
+		<label>Utilisation :<h6 class="util">[votre prefix]eval {votre code}</h6></label><br>
+		<label>Exemple :<h6 class="util">!eval message.channel.send("__test__")</h6></label><br>
+		<label>Résultat :<h6 class="util">Le bot enverra le message <u>test</u></h6></label>
+		<div id="config">
+			<h2>Configuration</h2>
+			<select id="select" onchange="getOption()">
+            	<option id="admin">Administrateur</option>
+            	<option id="custom">User ID</option>
+      	  </select>
+    		<h6 id="success-msg" style="display: none; color: green;">Votre configuration à bien été sauvegardé.</h6>
+			<div id="input-id" style="padding: 10px;">
+			</div>
+			<button id="save-btn" onClick="save()">Sauvegarder la configuration</button>
+		</div>
+	</div>
+</body>
+<script src="./main.js"> </script>
+
+</html>
